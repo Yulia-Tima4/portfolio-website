@@ -244,8 +244,23 @@ h2 {
 
 /* === МОБИЛЬНАЯ ВЕРСИЯ === */
 @media (max-width: 600px) {
-    h1 {
-        font-size: 32px;
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .hero-photo img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .contacts {
+        justify-content: center;
     }
 
     .section {
@@ -255,5 +270,7 @@ h2 {
     .btn {
         padding: 8px 14px;
         font-size: 13px;
+    }
+}
     }
 }
