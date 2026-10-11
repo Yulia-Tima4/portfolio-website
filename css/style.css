@@ -1,967 +1,208 @@
-/* ============================================================
-   YULIA TIMACHEVA — PORTFOLIO WEBSITE
-   Style sheet
-   ============================================================
-   Содержание:
-   01. Переменные (design tokens)
-   02. Reset & базовые стили
-   03. Topbar (навигация)
-   04. Hero-секция
-   05. Терминал (декоративный элемент)
-   06. Плавающие карточки
-   07. Тикер (бегущая строка)
-   08. Секции (общие)
-   09. About
-   10. Work (проекты)
-   11. Skills
-   12. Contact
-   13. Footer
-   14. Адаптив
-   ============================================================ */
 
-
-/* ============================================================
-   01. ПЕРЕМЕННЫЕ (design tokens)
-   ============================================================ */
-:root {
-    --bg: #10131b;                    /* основной фон */
-    --panel: #191e2a;                 /* фон карточек */
-    --text: #f4f5f8;                  /* основной текст */
-    --muted: #9299aa;                 /* приглушённый текст */
-    --line: rgba(255, 255, 255, .1);  /* границы и разделители */
-
-    --purple: #b7a3ff;                /* акцент 1 — фиолетовый */
-    --mint: #7fe0c3;                  /* акцент 2 — мятный */
-
-    --mono: 'DM Mono', monospace;     /* шрифт для кода */
-    --sans: 'Manrope', sans-serif;    /* основной шрифт */
-}
-
-
-/* ============================================================
-   02. RESET И БАЗОВЫЕ СТИЛИ
-   ============================================================ */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 90px;         /* отступ при переходе по якорю */
+:root {
+    --bg: #0D1117;
+    --card: #161B22;
+    --border: #21262D;
+    --text: #C9D1D9;
+    --muted: #8B949E;
+    --accent: #A371F7;
 }
 
 body {
-    margin: 0;
+    font-family: 'Inter', sans-serif;
     background: var(--bg);
     color: var(--text);
-    font-family: var(--sans);
     line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* Фокус для клавиатурной навигации */
-a:focus-visible {
-    outline: 2px solid var(--mint);
-    outline-offset: 5px;
-}
-
-/* Общий контейнер */
-.wrap {
-    width: min(1160px, 88%);
-    margin: auto;
-}
-
-
-/* ============================================================
-   03. TOPBAR (навигация)
-   ============================================================ */
-.topbar {
-    height: 80px;
-    padding: 0 6%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    border-bottom: 1px solid var(--line);
-    position: sticky;
-    top: 0;
-    z-index: 5;
-    background: rgba(16, 19, 27, .9);
-    backdrop-filter: blur(16px);
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    font-size: 13px;
-    font-weight: 800;
-    line-height: 1.25;
-}
-
-.logo {
-    width: 36px;
-    height: 36px;
-    display: grid;
-    place-items: center;
-    border: 1px solid #8f7bd3;
-    border-radius: 11px;
-    color: var(--purple);
-    font: 12px var(--mono);
-}
-
-.brand small {
-    display: block;
-    color: var(--muted);
-    font: 9px var(--mono);
-    letter-spacing: 1.7px;
-    margin-top: 4px;
-}
-
-.topbar nav {
-    display: flex;
-    gap: clamp(15px, 2.7vw, 36px);
-    font-size: 12px;
-    color: #bbc0ce;
-}
-
-.topbar nav a:hover,
-.git:hover,
-.link:hover,
-footer > a:hover {
-    color: var(--mint);
-}
-
-.git {
-    font: 11px var(--mono);
-    color: var(--purple);
-}
-
-
-/* ============================================================
-   04. HERO-СЕКЦИЯ
-   ============================================================ */
+/* === ШАПКА === */
 .hero {
-    min-height: 650px;
-    padding-top: 90px;
-    padding-bottom: 80px;
-    display: grid;
-    grid-template-columns: 1.08fr .92fr;
-    gap: 40px;
-    align-items: center;
-    position: relative;
-}
-
-.eyebrow {
-    font: 10px var(--mono);
-    letter-spacing: 1.6px;
-    color: var(--mint);
-    margin: 0 0 22px;
-}
-
-.eyebrow i {
-    display: inline-block;
-    width: 7px;
-    height: 7px;
-    background: var(--mint);
-    border-radius: 50%;
-    margin-right: 9px;
-    box-shadow: 0 0 13px #7fe0c377;
+    padding: 80px 0;
+    text-align: center;
 }
 
 h1 {
-    font-size: clamp(38px, 4.6vw, 62px);
-    line-height: 1.14;
-    letter-spacing: -2.7px;
-    margin: 0 0 24px;
-    font-weight: 800;
+    font-size: 42px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
 }
 
-h1 em {
-    font-style: normal;
-    color: var(--purple);
+.role {
+    font-size: 20px;
+    color: var(--accent);
+    margin-bottom: 6px;
 }
 
-.lead {
-    font-size: 14px;
-    color: #aeb4c3;
-    line-height: 1.9;
-    max-width: 530px;
-}
-
-.actions {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-top: 28px;
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    padding: 12px 16px;
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    font-size: 11px;
-    font-weight: 800;
-    transition: .2s;
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-    border-color: var(--purple);
-}
-
-.btn.primary {
-    background: var(--purple);
-    color: #171420;
-    border-color: var(--purple);
-}
-
-.meta {
-    display: flex;
-    gap: 36px;
-    margin-top: 45px;
-}
-
-.meta div {
-    display: grid;
-    gap: 5px;
-}
-
-.meta small {
-    font: 9px var(--mono);
-    color: #737b8d;
-    letter-spacing: 1px;
-}
-
-.meta b {
-    font-size: 11px;
-    font-weight: 600;
-    color: #d9dce5;
-}
-
-
-/* ============================================================
-   05. ВИЗУАЛЬНАЯ ЧАСТЬ HERO (терминал и орбиты)
-   ============================================================ */
-.visual {
-    height: 400px;
-    display: grid;
-    place-items: center;
-    position: relative;
-}
-
-.orbit {
-    position: absolute;
-    border: 1px solid #b7a3ff22;
-    border-radius: 50%;
-}
-
-.o1 {
-    width: 370px;
-    height: 280px;
-    transform: rotate(-25deg);
-}
-
-.o2 {
-    width: 300px;
-    height: 390px;
-    transform: rotate(45deg);
-    border-color: #7fe0c322;
-}
-
-/* --- Терминал --- */
-.terminal {
-    position: relative;
-    z-index: 1;
-    width: min(390px, 100%);
-    border: 1px solid #b7a3ff4a;
-    border-radius: 13px;
-    background: #171b26;
-    overflow: hidden;
-    box-shadow: 0 25px 80px #0005, 0 0 65px #b7a3ff0d;
-    transform: rotate(-2deg);
-}
-
-.term-head {
-    height: 42px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 0 14px;
-    border-bottom: 1px solid var(--line);
-}
-
-.term-head i {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: #e58b92;
-}
-
-.term-head i:nth-child(2) { background: #e5c47a; }
-.term-head i:nth-child(3) { background: #7ed8b5; }
-
-.term-head small {
-    margin-left: auto;
-    color: #788092;
-    font: 9px var(--mono);
-}
-
-.term-code {
-    padding: 22px 17px;
-    font: 10px/2.5 var(--mono);
-    white-space: nowrap;
-    color: #d6d9e4;
-}
-
-.term-code p { margin: 0; }
-.term-code p span { color: #687185; }
-.term-code b { color: #c3aaff; font-weight: 400; }
-.term-code i { color: #8ce1c6; font-style: normal; }
-
-.term-code hr {
-    border: 0;
-    border-top: 1px solid var(--line);
-    margin: 10px 0;
-}
-
-.term-code .success { color: var(--mint); }
-
-
-/* ============================================================
-   06. ПЛАВАЮЩИЕ КАРТОЧКИ (floating cards)
-   ============================================================ */
-.float {
-    position: absolute;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 11px 12px;
-    border: 1px solid #ffffff1c;
-    border-radius: 10px;
-    background: #202535;
-    box-shadow: 0 15px 40px #0004;
-}
-
-.float b {
-    display: block;
-    font-size: 10px;
-}
-
-.float small {
-    display: block;
-    color: #858da0;
-    font-size: 9px;
-    margin-top: 2px;
-}
-
-.float .check,
-.float .bug {
-    width: 28px;
-    height: 28px;
-    display: grid;
-    place-items: center;
-    border-radius: 8px;
-    background: #7fe0c31c;
-    color: var(--mint);
-}
-
-.float .bug {
-    background: #b7a3ff1c;
-    color: var(--purple);
-}
-
-.float strong {
-    font: 8px var(--mono);
-    color: var(--mint);
-    padding: 4px;
-    background: #7fe0c315;
-}
-
-.float.top {
-    top: 40px;
-    right: -3px;
-}
-
-.float.bottom {
-    bottom: 32px;
-    left: -5px;
-}
-
-/* Круглая печать QA */
-.stamp {
-    position: absolute;
-    right: 22px;
-    bottom: -12px;
-    width: 67px;
-    height: 67px;
-    border: 1px solid #b7a3ff55;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    color: var(--purple);
-    transform: rotate(12deg);
-    font-weight: 800;
-}
-
-.stamp small {
-    font: 6px/1.4 var(--mono);
-}
-
-/* Подсказка «скролль» */
-.scroll {
-    position: absolute;
-    bottom: 24px;
-    left: 0;
-    color: #707789;
-    font: 8px var(--mono);
-    letter-spacing: 1.3px;
-}
-
-
-/* ============================================================
-   07. ТИКЕР (бегущая строка)
-   ============================================================ */
-.ticker {
-    overflow: hidden;
-    white-space: nowrap;
-    padding: 17px 6%;
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-    text-align: center;
-    color: #9298a8;
-    font: 10px var(--mono);
-    letter-spacing: 2px;
-}
-
-.ticker span {
-    color: var(--purple);
-    margin: 0 23px;
-}
-
-
-/* ============================================================
-   08. СЕКЦИИ (общие стили)
-   ============================================================ */
-.section {
-    padding-top: 115px;
-    padding-bottom: 115px;
-}
-
-.section h2 {
-    font-size: clamp(32px, 4vw, 47px);
-    line-height: 1.18;
-    letter-spacing: -1.8px;
-    margin: 0 0 43px;
-}
-
-.section h2 span {
+.tagline {
     color: var(--muted);
-}
-
-
-/* ============================================================
-   09. ABOUT
-   ============================================================ */
-.about {
-    display: grid;
-    grid-template-columns: .8fr 1.2fr;
-    gap: 85px;
-}
-
-.about-lead {
-    font-size: 19px;
-    line-height: 1.8;
-    color: #c3c8d4;
-    max-width: 370px;
-}
-
-.steps {
-    border-top: 1px solid var(--line);
-}
-
-.steps article {
-    display: grid;
-    grid-template-columns: 45px 1fr;
-    gap: 12px;
-    padding: 20px 0;
-    border-bottom: 1px solid var(--line);
-}
-
-.steps small {
-    color: var(--purple);
-    font: 10px var(--mono);
-}
-
-.steps b {
-    font-size: 13px;
-}
-
-.steps p {
-    color: var(--muted);
-    font-size: 12px;
-    line-height: 1.8;
-    margin: 7px 0 0;
-}
-
-
-/* ============================================================
-   10. WORK (проекты)
-   ============================================================ */
-.section-head {
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-    gap: 25px;
-}
-
-.section-head h2 {
-    margin-bottom: 43px;
-}
-
-.section-head > p {
-    font-size: 11px;
-    color: var(--muted);
-    line-height: 1.8;
-    margin-bottom: 48px;
-}
-
-.projects {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 17px;
-}
-
-.project {
-    padding: 25px;
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    background: linear-gradient(145deg, #191e2a, #141720);
-    transition: transform .2s, border-color .2s;
-}
-
-.project:hover {
-    transform: translateY(-4px);
-    border-color: #b7a3ff66;
-}
-
-.featured {
-    grid-row: span 2;
-}
-
-.project-meta {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    color: #7f8798;
-    font: 8px var(--mono);
-    letter-spacing: .7px;
-}
-
-.project-meta span:last-child {
-    text-align: right;
-}
-
-/* Визуальная «обложка» проекта */
-.art {
-    height: 140px;
-    margin: 22px 0 20px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.school {
-    background: radial-gradient(circle, #b7a3ff33, transparent 60%), #202335;
-}
-
-.school:before,
-.school:after {
-    content: '';
-    position: absolute;
-    width: 200px;
-    height: 65px;
-    border: 1px solid #b7a3ff2c;
-    border-radius: 50%;
-    transform: rotate(35deg);
-}
-
-.school:after {
-    transform: rotate(-35deg);
-    border-color: #7fe0c322;
-}
-
-.school b {
-    width: 65px;
-    height: 65px;
-    display: grid;
-    place-items: center;
-    border: 1px solid #b7a3ffb0;
-    border-radius: 17px;
-    color: var(--purple);
-    font: 20px var(--mono);
-    transform: rotate(-8deg);
-    z-index: 1;
-}
-
-.hire {
-    background: radial-gradient(circle at 70% 30%, #7fe0c322, transparent 50%), #1c292d;
-    font-size: 55px;
-    font-weight: 800;
-    color: var(--mint);
-}
-
-.hire span {
-    font-size: 50px;
-    margin-left: 8px;
-    font-weight: 400;
-}
-
-.code {
-    flex-direction: column;
-    gap: 8px;
-    background: #202335;
-    color: var(--purple);
-    font: 32px var(--mono);
-}
-
-.code i {
-    width: 80px;
-    height: 3px;
-    border-radius: 3px;
-    background: #b7a3ff80;
-}
-
-.code i:last-child {
-    width: 48px;
-    background: #7fe0c380;
-}
-
-.project h3 {
-    font-size: 22px;
-    letter-spacing: -.7px;
-    margin: 0 0 10px;
-}
-
-.project > p {
-    font-size: 12px;
-    line-height: 1.85;
-    color: #a4abba;
-    min-height: 55px;
-}
-
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin: 18px 0 20px;
-}
-
-.tags span {
-    border: 1px solid var(--line);
-    border-radius: 5px;
-    padding: 5px 8px;
-    color: #b8becc;
-    font: 9px var(--mono);
-}
-
-.link {
-    color: var(--purple);
-    font-size: 11px;
-    font-weight: 800;
-}
-
-.note {
-    display: block;
-    border-top: 1px solid var(--line);
-    padding-top: 13px;
-    margin-top: 18px;
-    color: #788092;
-    font-size: 10px;
-    line-height: 1.7;
-}
-
-/* Callout — большой блок внизу проектов */
-.callout {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-top: 22px;
-    padding: 21px;
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    background: #151923;
-}
-
-.callout-icon {
-    width: 38px;
-    height: 38px;
-    display: grid;
-    place-items: center;
-    background: #b7a3ff1c;
-    border-radius: 9px;
-    color: var(--purple);
-}
-
-.callout > div {
-    flex: 1;
-}
-
-.callout b {
-    font-size: 12px;
-}
-
-.callout p {
-    font-size: 11px;
-    color: var(--muted);
-    margin: 4px 0 0;
-}
-
-
-/* ============================================================
-   11. SKILLS
-   ============================================================ */
-.skills {
-    background: #151923;
-    border-block: 1px solid var(--line);
-}
-
-.skill-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 35px;
-}
-
-.skill-grid > div {
-    border-top: 1px solid #b7a3ff77;
-    padding-top: 18px;
-}
-
-.skill-grid small {
-    color: var(--purple);
-    font: 10px var(--mono);
-}
-
-.skill-grid h3 {
-    font-size: 17px;
-    margin: 15px 0 20px;
-}
-
-.skill-grid p {
-    font-size: 12px;
-    color: #aab0bf;
-    margin: 0 0 12px;
-}
-
-.skill-grid p:before {
-    content: '↗';
-    color: var(--mint);
-    margin-right: 9px;
-}
-
-
-/* ============================================================
-   12. CONTACT
-   ============================================================ */
-.contact {
-    display: grid;
-    grid-template-columns: 1fr .85fr;
-    gap: 70px;
-    padding: 48px;
-    border: 1px solid #b7a3ff3b;
-    border-radius: 16px;
-    background: radial-gradient(circle at 0 0, #b7a3ff1a, transparent 45%), #171b26;
-}
-
-.contact h2 {
-    margin-bottom: 20px;
-}
-
-.contact-text {
-    color: var(--muted);
-    font-size: 12px;
-    max-width: 320px;
-    line-height: 1.8;
+    margin-bottom: 30px;
 }
 
 .contacts {
     display: flex;
-    flex-direction: column;
+    gap: 10px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
-.contacts a {
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    background: var(--accent);
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+/* === СЕКЦИИ === */
+.section {
+    padding: 40px 0;
+    border-top: 1px solid var(--border);
+}
+
+h2 {
+    font-size: 26px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+/* === ОБО МНЕ === */
+.about {
+    list-style: none;
+}
+
+.about li {
+    padding: 10px 0;
+    font-size: 15px;
+}
+
+.about strong {
+    color: var(--accent);
+}
+
+/* === КАРТОЧКИ ОПЫТА === */
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-bottom: 6px;
+}
+
+.meta {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 10px;
+}
+
+.card ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.card li {
+    padding: 3px 0;
+    font-size: 14px;
+}
+
+.card strong {
+    color: var(--accent);
+}
+
+/* === ПРОЕКТЫ === */
+.projects {
     display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 2px 12px;
-    padding: 15px 0;
-    border-bottom: 1px solid var(--line);
+    gap: 12px;
 }
 
-.contacts a:first-child {
-    border-top: 1px solid var(--line);
+.project {
+    display: block;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    text-decoration: none;
+    color: var(--text);
 }
 
-.contacts small {
-    font: 9px var(--mono);
-    color: #7f8798;
+.project:hover {
+    border-color: var(--accent);
 }
 
-.contacts b {
-    font-size: 12px;
-    font-weight: 600;
+.project h3 {
+    font-size: 17px;
+    color: #FFFFFF;
+    margin-bottom: 6px;
 }
 
-.contacts span {
-    grid-column: 2;
-    grid-row: 1/3;
-    align-self: center;
-    color: var(--purple);
+.project p {
+    font-size: 14px;
+    color: var(--muted);
 }
 
+/* === КОНТАКТЫ === */
+.contacts-list {
+    list-style: none;
+}
 
-/* ============================================================
-   13. FOOTER
-   ============================================================ */
+.contacts-list li {
+    padding: 8px 0;
+    font-size: 15px;
+}
+
+.contacts-list a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.contacts-list a:hover {
+    text-decoration: underline;
+}
+
+/* === ФУТЕР === */
 .footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    padding-top: 25px;
-    padding-bottom: 30px;
-    border-top: 1px solid var(--line);
-    color: #747c8d;
-    font-size: 10px;
+    padding: 30px 0;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    border-top: 1px solid var(--border);
 }
 
-.footer > a:last-child {
-    color: #b6bbca;
-}
-
-
-/* ============================================================
-   14. АДАПТИВ
-   ============================================================ */
-
-/* --- Планшет: до 900px --- */
-@media (max-width: 900px) {
-    .topbar { padding: 0 5%; }
-    .topbar nav { gap: 14px; }
-    .topbar nav a { font-size: 10px; }
-
-    .hero {
-        grid-template-columns: 1fr .8fr;
-        gap: 22px;
-    }
-
-    .visual { transform: scale(.9); }
-
-    .about { gap: 45px; }
-
-    .contact {
-        gap: 35px;
-        padding: 35px;
-    }
-}
-
-/* --- Мобильный: до 680px --- */
-@media (max-width: 680px) {
-    html { scroll-padding-top: 70px; }
-
-    .topbar { height: 70px; }
-    .topbar nav { display: none; }
-    .git { margin-left: auto; }
-
-    .hero {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        padding-top: 65px;
-        padding-bottom: 75px;
-        gap: 10px;
-    }
-
+/* === МОБИЛЬНАЯ ВЕРСИЯ === */
+@media (max-width: 600px) {
     h1 {
-        font-size: clamp(36px, 10vw, 52px);
-        letter-spacing: -1.8px;
+        font-size: 32px;
     }
 
-    .visual {
-        height: 330px;
-        margin-top: 12px;
-        transform: none;
+    .section {
+        padding: 30px 0;
     }
 
-    .o1 { width: 290px; height: 230px; }
-    .o2 { width: 245px; height: 310px; }
-
-    .terminal { width: min(350px, 94%); }
-    .term-code { font-size: 8px; padding: 18px 12px; }
-
-    .float { padding: 8px; }
-    .float b { font-size: 9px; }
-    .float small { font-size: 8px; }
-    .float.top { top: 3px; right: 0; }
-    .float.bottom { bottom: 2px; left: 0; }
-    .float strong { display: none; }
-
-    .stamp { right: 10px; bottom: -15px; }
-
-    .meta { gap: 24px; margin-top: 33px; }
-    .meta b { font-size: 10px; }
-
-    .scroll { bottom: 18px; }
-
-    .ticker { text-align: left; font-size: 9px; padding: 14px 18px; }
-
-    .section { padding-top: 75px; padding-bottom: 75px; }
-    .section h2 { letter-spacing: -1.2px; margin-bottom: 30px; }
-
-    .about { grid-template-columns: 1fr; gap: 15px; }
-    .about-lead { font-size: 17px; }
-
-    .section-head { display: block; }
-    .section-head > p { margin-top: -15px; margin-bottom: 28px; }
-
-    .projects { grid-template-columns: 1fr; }
-    .featured { grid-row: auto; }
-    .project > p { min-height: 0; }
-
-    .callout { flex-wrap: wrap; padding: 16px; }
-    .callout .btn { width: 100%; }
-
-    .skill-grid { grid-template-columns: 1fr; gap: 30px; }
-
-    .contact {
-        grid-template-columns: 1fr;
-        gap: 25px;
-        padding: 27px 21px;
-    }
-
-    .footer { flex-wrap: wrap; }
-    .footer > span { order: 3; width: 100%; }
-}
-
-/* --- Для пользователей с ограничениями анимаций --- */
-@media (prefers-reduced-motion: reduce) {
-    *, *:before, *:after {
-        scroll-behavior: auto !important;
-        transition-duration: .01ms !important;
+    .btn {
+        padding: 8px 14px;
+        font-size: 13px;
     }
 }
