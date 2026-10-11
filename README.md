@@ -1,22 +1,18 @@
-# 🖥 Yulia Timacheva
+# 🖥 Yulia Timacheva — Portfolio Website
 
 Персональный сайт-визитка QA Engineer: опыт, проекты и контакты.
 
 🌐 **Live:** [yulia-tima4.github.io/portfolio-website](https://yulia-tima4.github.io/portfolio-website/)
 
----
-
 ## 🎨 Что внутри
 
 | Секция | Содержание |
 |---|---|
-| **Hero** | Имя, роль, контакты |
+| **Hero** | Фото, имя, роль, контакты |
 | **Обо мне** | Краткое описание опыта |
 | **Опыт** | Hiiire + образовательная платформа |
 | **Проекты** | Ссылки на GitHub-репозитории |
 | **Контакты** | Email, Telegram, GitHub |
-
----
 
 ## 🛠 Стек
 
@@ -25,8 +21,6 @@
 - Google Fonts (Inter)
 - Адаптив под мобильные
 
----
-
 ## 📁 Структура
 
 ```
@@ -34,32 +28,10 @@ portfolio-website/
 ├── index.html       # главная страница
 ├── css/
 │   └── style.css    # стили
+├── assets/
+│   └── avatar.jpg   # фото
 └── README.md
 ```
-
----
-
-## 💻 Локальный запуск
-
-```bash
-git clone https://github.com/Yulia-Tima4/portfolio-website.git
-cd portfolio-website
-open index.html
-```
-
-Или просто откройте `index.html` в браузере.
-
----
-
-## 🚀 Публикация на GitHub Pages
-
-1. Откройте **Settings → Pages**
-2. **Source:** `Deploy from a branch`
-3. **Branch:** `main` / `/ (root)`
-4. **Save**
-5. Сайт доступен: `https://yulia-tima4.github.io/portfolio-website/`
-
----
 
 ## 📝 О проекте
 
