@@ -1,6 +1,5 @@
-# Portfolio Website
-
-Персональный сайт-визитка QA Engineer.
+# 🧪 Yulia Timacheva
+**QA Engineer · сайт-визитка**
 
 🌐 **Live:** [https://yulia-tima4.github.io/portfolio-website/](https://yulia-tima4.github.io/portfolio-website/)
 
