@@ -1,244 +1,105 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Yulia Timacheva — QA Engineer. Портфолио ручного тестирования: чек-листы, тест-дизайн, баг-репорты.">
-<title>Yulia Timacheva — QA Engineer · портфолио</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yulia Timacheva — QA Engineer</title>
+    <meta name="description" content="Yulia Timacheva — QA Engineer. Портфолио ручного тестирования.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- ============ TOPBAR ============ -->
-<header class="topbar">
-  <a class="brand" href="#top">
-    <span class="logo">YT</span>
-    <span>Yulia Timacheva<small>QA ENGINEER</small></span>
-  </a>
-  <nav>
-    <a href="#about">Обо мне</a>
-    <a href="#work">Портфолио</a>
-    <a href="#skills">Навыки</a>
-    <a href="#contact">Контакты</a>
-  </nav>
-  <a class="git" href="https://github.com/Yulia-Tima4" target="_blank" rel="noreferrer">GitHub ↗</a>
-</header>
+    <!-- ШАПКА -->
+    <header class="hero">
+        <div class="container">
+            <h1>Yulia Timacheva</h1>
+            <p class="role">QA Engineer</p>
+            <p class="tagline">Ручное тестирование · Веб-приложения</p>
 
-<main id="top">
-
-<!-- ============ HERO ============ -->
-<section class="hero wrap">
-  <div class="intro">
-    <p class="eyebrow"><i></i> MANUAL QA · WEB TESTING</p>
-    <h1>Нахожу проблемы.<br><em>Проверяю гипотезы.</em><br>Улучшаю качество.</h1>
-    <p class="lead">Я Yulia — QA Engineer. Здесь собраны примеры тестовой документации, подход к проверке пользовательских сценариев и проекты, с которыми я работала.</p>
-    <div class="actions">
-      <a class="btn primary" href="#work">Смотреть портфолио ↓</a>
-      <a class="btn" href="mailto:timacheva@icloud.com">Связаться ↗</a>
-    </div>
-    <div class="meta">
-      <div><small>ФОКУС</small><b>Manual testing · Web</b></div>
-      <div><small>ИНСТРУМЕНТЫ</small><b>DevTools · GitHub · Miro</b></div>
-    </div>
-  </div>
-
-  <div class="visual" aria-label="Декоративная иллюстрация тестового отчёта">
-    <div class="orbit o1"></div>
-    <div class="orbit o2"></div>
-
-    <div class="float top">
-      <span class="check">✓</span>
-      <span><b>Scenario checked</b><small>Positive flow</small></span>
-      <strong>PASS</strong>
-    </div>
-
-    <div class="terminal">
-      <div class="term-head"><i></i><i></i><i></i><small>test-run.log</small></div>
-      <div class="term-code">
-        <p><span>01</span> <b>describe</b>(<i>'Registration'</i>)</p>
-        <p><span>02</span> &nbsp;<b>check</b>(<i>'required fields'</i>)</p>
-        <p><span>03</span> &nbsp;<b>verify</b>(<i>'validation'</i>)</p>
-        <p><span>04</span> &nbsp;<b>report</b>(<i>'reproducible bug'</i>)</p>
-        <hr>
-        <p class="success"><span>05</span> ✓ Ready for review</p>
-      </div>
-    </div>
-
-    <div class="float bottom">
-      <span class="bug">↗</span>
-      <span><b>Bug report</b><small>Steps · Actual · Expected</small></span>
-    </div>
-
-    <div class="stamp">QA<small>QUALITY<br>MATTERS</small></div>
-  </div>
-
-  <div class="scroll">— &nbsp; SCROLL TO EXPLORE</div>
-</section>
-
-<div class="ticker">TEST DESIGN <span>✳</span> BUG REPORTING <span>✳</span> REGRESSION <span>✳</span> WEB TESTING <span>✳</span> TEST DESIGN</div>
-
-<!-- ============ ABOUT ============ -->
-<section class="section wrap" id="about">
-  <p class="eyebrow">01 / ABOUT</p>
-  <h2>Подход важнее<br><span>количества тестов.</span></h2>
-  <div class="about">
-    <p class="about-lead">Тестирование — это не только поиск ошибок. Это понимание сценария пользователя, проверка рисков и ясная коммуникация о том, что работает не так.</p>
-    <div class="steps">
-      <article>
-        <small>01</small>
-        <div>
-          <b>Разбираюсь в сценарии</b>
-          <p>Изучаю форму, пользовательский путь и доступные требования до начала проверки.</p>
+            <div class="contacts">
+                <a href="mailto:timacheva@icloud.com" class="btn">timacheva@icloud.com</a>
+                <a href="https://t.me/tima4_yu" class="btn">@tima4_yu</a>
+                <a href="https://github.com/Yulia-Tima4/qa-manual-portfolio" class="btn">Портфолио QA</a>
+            </div>
         </div>
-      </article>
-      <article>
-        <small>02</small>
-        <div>
-          <b>Проверяю разные варианты</b>
-          <p>Учитываю позитивные и негативные сценарии, обязательные поля и граничные случаи.</p>
+    </header>
+
+    <!-- ОБО МНЕ -->
+    <section class="section">
+        <div class="container">
+            <h2>Обо мне</h2>
+            <ul class="about">
+                <li>Работала в QA над HR-сервисом <strong>Hiiire</strong> и сопровождала образовательную платформу</li>
+                <li>Умею разбираться в пользовательских обращениях и описывать дефекты понятным языком</li>
+                <li>Прошла подготовку в <strong>QA.Studio</strong> — чек-листы, баг-репорты, API, SQL, работа с логами</li>
+            </ul>
         </div>
-      </article>
-      <article>
-        <small>03</small>
-        <div>
-          <b>Фиксирую результат</b>
-          <p>Описываю шаги воспроизведения, фактический и ожидаемый результаты без предположений.</p>
+    </section>
+
+    <!-- ОПЫТ -->
+    <section class="section">
+        <div class="container">
+            <h2>Опыт</h2>
+
+            <div class="card">
+                <h3>QA в HR-сервисе Hiiire</h3>
+                <p class="meta">Стажировка · 56 часов</p>
+                <p>Ретест, регрессионное тестирование, подготовка тестовых данных, оформление баг-репортов.</p>
+                <ul>
+                    <li>Ретест <strong>29 дефектов</strong></li>
+                    <li>Нашла <strong>14 новых дефектов</strong></li>
+                    <li>Подготовила <strong>3 рекомендации</strong></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Техническое сопровождение образовательной платформы</h3>
+                <p>Разбор обращений пользователей, воспроизведение проблем, описание дефектов, взаимодействие с IT-командой.</p>
+            </div>
         </div>
-      </article>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ============ WORK ============ -->
-<section class="section wrap" id="work">
-  <div class="section-head">
-    <div>
-      <p class="eyebrow">02 / SELECTED WORK</p>
-      <h2>Проекты и <span>артефакты.</span></h2>
-    </div>
-    <p>Практические материалы и примеры документации<br>по ручному тестированию.</p>
-  </div>
+    <!-- ПРОЕКТЫ -->
+    <section class="section">
+        <div class="container">
+            <h2>Проекты</h2>
+            <div class="projects">
+                <a href="https://github.com/Yulia-Tima4/qa-manual-portfolio" class="project">
+                    <h3>Портфолио QA</h3>
+                    <p>Чек-листы, баг-репорты, тест-дизайн</p>
+                </a>
+                <a href="https://github.com/Yulia-Tima4/Yulia-Tima4" class="project">
+                    <h3>GitHub-профиль</h3>
+                    <p>README-визитка</p>
+                </a>
+                <a href="https://github.com/Yulia-Tima4/portfolio-website" class="project">
+                    <h3>Сайт-визитка</h3>
+                    <p>HTML, CSS</p>
+                </a>
+            </div>
+        </div>
+    </section>
 
-  <div class="projects">
+    <!-- КОНТАКТЫ -->
+    <section class="section">
+        <div class="container">
+            <h2>Контакты</h2>
+            <ul class="contacts-list">
+                <li>Email: <a href="mailto:timacheva@icloud.com">timacheva@icloud.com</a></li>
+                <li>Telegram: <a href="https://t.me/tima4_yu">@tima4_yu</a></li>
+                <li>GitHub: <a href="https://github.com/Yulia-Tima4">Yulia-Tima4</a></li>
+            </ul>
+        </div>
+    </section>
 
-    <article class="project featured">
-      <div class="project-meta"><span>PROJECT 01</span><span>WEB APPLICATION</span></div>
-      <div class="art school"><b>LS</b></div>
-      <h3>Lomonosov.school</h3>
-      <p>Проверка пользовательских сценариев образовательной платформы: регистрация, авторизация и работа с формами.</p>
-      <div class="tags"><span>Checklists</span><span>Test design</span><span>Web testing</span></div>
-      <a class="link" href="https://github.com/Yulia-Tima4/qa-manual-portfolio" target="_blank" rel="noreferrer">Открыть артефакты ↗</a>
-      <small class="note">Чек-листы и тест-дизайн формы регистрации доступны в репозитории qa-manual-portfolio.</small>
-    </article>
-
-    <article class="project">
-      <div class="project-meta"><span>PROJECT 02</span><span>HR · SAAS</span></div>
-      <div class="art hire">H<span>◌</span></div>
-      <h3>Hiiire</h3>
-      <p>Примеры оформления дефектов по сценариям регистрации, тарифов и подписки.</p>
-      <div class="tags"><span>Bug reports</span><span>Retesting</span></div>
-      <a class="link" href="https://github.com/Yulia-Tima4/qa-manual-portfolio/tree/main/bug-reports" target="_blank" rel="noreferrer">Смотреть баг-репорты ↗</a>
-      <small class="note">Три оформленных дефекта из стажировки: сессия подтверждения email, форма тарифа, понижение тарифа.</small>
-    </article>
-
-    <article class="project">
-      <div class="project-meta"><span>SIDE PROJECT</span><span>HTML · CSS</span></div>
-      <div class="art code">&lt;/&gt;<i></i><i></i></div>
-      <h3>Сайт-визитка</h3>
-      <p>Персональный сайт с информацией об опыте, навыках и контактами.</p>
-      <div class="tags"><span>HTML5</span><span>CSS3</span><span>Responsive UI</span></div>
-      <a class="link" href="https://github.com/Yulia-Tima4/portfolio-website" target="_blank" rel="noreferrer">Исходный код ↗</a>
-    </article>
-
-  </div>
-
-  <div class="callout">
-    <span class="callout-icon">↗</span>
-    <div>
-      <b>Больше тестовых артефактов — на GitHub</b>
-      <p>Чек-листы, тест-дизайн и баг-репорты доступны в репозиториях.</p>
-    </div>
-    <a class="btn" href="https://github.com/Yulia-Tima4/qa-manual-portfolio" target="_blank" rel="noreferrer">Перейти на GitHub ↗</a>
-  </div>
-</section>
-
-<!-- ============ SKILLS ============ -->
-<section class="section skills" id="skills">
-  <div class="wrap">
-    <p class="eyebrow">03 / TOOLKIT</p>
-    <h2>Инструменты и <span>навыки.</span></h2>
-    <div class="skill-grid">
-      <div>
-        <small>01</small>
-        <h3>Тестирование</h3>
-        <p>Функциональное тестирование</p>
-        <p>Позитивные и негативные сценарии</p>
-        <p>Регрессионное тестирование</p>
-        <p>Тест-дизайн</p>
-        <p>Ретестирование дефектов</p>
-      </div>
-      <div>
-        <small>02</small>
-        <h3>Документация</h3>
-        <p>Чек-листы</p>
-        <p>Тест-кейсы</p>
-        <p>Баг-репорты</p>
-        <p>Классы эквивалентности</p>
-        <p>Граничные значения</p>
-      </div>
-      <div>
-        <small>03</small>
-        <h3>Инструменты</h3>
-        <p>Chrome DevTools</p>
-        <p>GitHub</p>
-        <p>Miro</p>
-        <p>HTML / CSS — базовый уровень</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CONTACT ============ -->
-<section class="section wrap" id="contact">
-  <div class="contact">
-    <div>
-      <p class="eyebrow">04 / CONTACT</p>
-      <h2>Обсудим<br><span>качество продукта?</span></h2>
-      <p class="contact-text">Открыта к профессиональному общению и новым задачам в тестировании.</p>
-    </div>
-    <div class="contacts">
-      <a href="mailto:timacheva@icloud.com">
-        <small>Email</small>
-        <b>timacheva@icloud.com</b>
-        <span>↗</span>
-      </a>
-      <a href="https://t.me/tima4_yu" target="_blank" rel="noreferrer">
-        <small>Telegram</small>
-        <b>@tima4_yu</b>
-        <span>↗</span>
-      </a>
-      <a href="https://github.com/Yulia-Tima4" target="_blank" rel="noreferrer">
-        <small>GitHub</small>
-        <b>Yulia-Tima4</b>
-        <span>↗</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<!-- ============ FOOTER ============ -->
-<footer class="footer wrap">
-  <a class="brand" href="#top">
-    <span class="logo">YT</span>
-    <span>Yulia Timacheva<small>QA ENGINEER</small></span>
-  </a>
-  <span>Сделано с вниманием к деталям.</span>
-  <a href="#top">Наверх ↑</a>
-</footer>
+    <!-- ФУТЕР -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Yulia Timacheva</p>
+        </div>
+    </footer>
 
 </body>
 </html>
